@@ -129,7 +129,7 @@ public class ClassPathUtils {
             }
 
             final String file = url.getFile();
-            final int exclam = file.lastIndexOf('!');
+            final int exclam = file.indexOf('!');
             final Path jar;
             try {
                 jar = toLocalPath(exclam >= 0 ? new URL(file.substring(0, exclam)) : url);
